@@ -324,57 +324,81 @@
               <h3>Booking Form</h3>
               <form>
                 <div class="name-address">
+                  <div class="first-second-names">
+                    <input
+                      type="first name"
+                      placeholder="First Name"
+                      id="first-name"
+                      name="first-name"
+                      required
+                    />
+                    <input
+                      type="second name"
+                      placeholder="Second Name"
+                      id="second-name"
+                      name="second-name"
+                      required
+                    />
+                  </div>
+                  <div class="email-phone">
+                    <input
+                      type="email address"
+                      placeholder="Email Address"
+                      id="email-address"
+                      name="email-address"
+                      required
+                    />
+                    <input
+                      type="phone number"
+                      placeholder="Phone"
+                      id="phone-number"
+                      name="phone-number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="travel-date">
                   <input
-                    type="first name"
-                    id="first-name"
-                    name="first-name"
-                    required
-                  />
-                  <input
-                    type="second name"
-                    id="second-name"
-                    name="second-name"
-                    required
-                  />
-
-                  <input
-                    type="email address"
-                    id="email-address"
-                    name="email-address"
-                    required
-                  />
-                  <input
-                    type="phone number"
-                    id="phone-number"
-                    name="phone-number"
+                    type="date"
+                    placeholder="Travel Date"
+                    id="travel-date"
+                    name="travel-date"
                     required
                   />
                 </div>
-                <input
-                  type="travel date"
-                  id="travel-date"
-                  name="travel-date"
-                  required
-                />
-                <input type="adults #" id="adults-#" name="adults-#" required />
-                <input
-                  type="children #"
-                  id="children-#"
-                  name="children-#"
-                  required
-                />
-                <input
-                  type="citizenship"
-                  id="citizenship"
-                  name="citizenship"
-                  required
-                />
-                <label for="extra details">Extra Details:</label>
-                <textarea
-                  id="extra details"
-                  name="extra details"
-                  required
-                ></textarea>
+                <div class="adults-children">
+                  <input
+                    type="adults #"
+                    placeholder="Adults #"
+                    id="adults-#"
+                    name="adults-#"
+                    required
+                  />
+                  <input
+                    type="children #"
+                    placeholder="Children #"
+                    id="children-#"
+                    name="children-#"
+                    required
+                  />
+                </div>
+                <div class="citizenship">
+                  <input
+                    type="citizenship"
+                    placeholder="Citizenship"
+                    id="citizenship"
+                    name="citizenship"
+                    required
+                  />
+                </div>
+                <div class="extra-details">
+                  <label for="extra details">Extra Details:</label>
+                  <textarea
+                    id="extra details"
+                    name="extra details"
+                    required
+                  ></textarea>
+                </div>
                 <button>Submit Booking</button>
               </form>
 
@@ -397,7 +421,13 @@
 
                 <textarea id="message" name="message" required></textarea>
 
-                <button type="submit" class="cta-button">Send Message</button>
+                <button
+                  type="submit"
+                  class="cta-button"
+                  onclick="document.getElementById('message').innerHTML = 'Thank you for Your Message!'"
+                >
+                  Send Message
+                </button>
               </form>
             </section>
           </div>
